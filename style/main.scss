@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto 0;
+
+    .toggleInterval {
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        background-color: black;
+        width: 100%;
+        opacity: .3;
+        cursor: pointer;
+        font-size: 40px;
+        color: white;
+        letter-spacing: 10px;
+    }
+
+    .toggleInterval:hover {
+        opacity: .5;
+        color: red;
+    }
+
+    .arrows {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .arrowLeft,
+        .arrowRight {
+            display: flex;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            background-color: black;
+            border-radius: 50%;
+            color: white;
+            font-size: 25px;
+            padding: 15px;
+            line-height: 20px;
+            user-select: none;
+            cursor: pointer;
+            margin: auto 15px;
+            opacity: .3;
+        }
+
+        .arrowLeft:active,
+        .arrowRight:active {
+            transform: translateY(10px);
+        }
+
+        .arrowLeft:hover,
+        .arrowRight:hover {
+            opacity: .5;
+        }
+    }
+
+    .mainSection {
+        width: 100%;
+        margin: 10px 100px 60px 100px;
+
+        .imgs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+
+            img {
+                height: 25px;
+            }
+
+            img:nth-child(2n) {
+                height: 75px;
+            }
+
+            img:nth-child(3n) {
+                height: 350px;
+            }
+        }
+    }
+}
