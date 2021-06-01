@@ -13,17 +13,16 @@ function slider(){
     startInterval();
     arrowRight.onclick = right;
     arrowLeft.onclick = left;
-    toggleInterval.addEventListener('click', ()=>{
-        if ( toggleInterval.innerHTML.toLowerCase() === "stop") {
-            toggleInterval.textContent = "continue".toUpperCase();
-            clearInterval(interval);
-        } else {
-            toggleInterval.textContent = "stop".toUpperCase();
-            startInterval();
-        }
-    });
+    pauseSlider();
 }
 slider();
+
+function valueZero(param){
+    for (let i = 0; i < param.length; i++) {
+        param==steps?param[i] = i:param[i].src = `./img/${i}.svg`;
+    }
+    return param;
+}
 
 function startInterval() {
     interval = setInterval(() => {right()}, speed);
@@ -43,11 +42,18 @@ function left(){
     }
 }
 
-function valueZero(param){
-    for (let i = 0; i < param.length; i++) {
-        param==steps?param[i] = i:param[i].src = `./img/${i}.svg`;
-    }
-    return param;
+function pauseSlider(){
+    toggleInterval.addEventListener('click', ()=>{
+        if ( toggleInterval.innerHTML.toLowerCase() === "stop") {
+            toggleInterval.style.color = "aquamarine";
+            toggleInterval.textContent = "continue".toUpperCase();
+            clearInterval(interval);
+        } else {
+            toggleInterval.style.color = "Coral";
+            toggleInterval.textContent = "stop".toUpperCase();
+            startInterval();
+        }
+    });
 }
 
 function countUp(param) {

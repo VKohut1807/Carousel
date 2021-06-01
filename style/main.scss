@@ -39,13 +39,12 @@ body {
         opacity: .3;
         cursor: pointer;
         font-size: 40px;
-        color: white;
+        color: Coral;
         letter-spacing: 10px;
     }
 
     .toggleInterval:hover {
-        opacity: .5;
-        color: red;
+        opacity: .3;
     }
 
     .arrows {
@@ -88,23 +87,58 @@ body {
         width: 100%;
         margin: 10px 100px 60px 100px;
 
-        .imgs {
+        .imgSlider {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             flex-wrap: wrap;
             align-items: center;
 
             img {
-                height: 25px;
+                width: 60px;
             }
 
             img:nth-child(2n) {
-                height: 75px;
+                width: 125px;
             }
 
             img:nth-child(3n) {
-                height: 350px;
+                width: 350px;
+            }
+        }
+
+        @media only screen and (min-device-width : 701px) and (max-device-width : 999px) {
+            .imgSlider {
+
+                img {
+                    display: none;
+                }
+
+                img:nth-child(2n) {
+                    width: 75px;
+                    display: block;
+                }
+
+                img:nth-child(3n) {
+                    display: block;
+                    width: 175px;
+                }
+            }
+        }
+
+        @media only screen and (max-device-width : 700px) {
+            .imgSlider {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    display: none;
+                }
+
+                img:nth-child(3n) {
+                    display: block;
+                    width: 175px;
+                }
             }
         }
     }
