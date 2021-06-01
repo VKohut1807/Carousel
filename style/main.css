@@ -95,7 +95,7 @@ body {
 .carousel .mainSection .imgSlider img:nth-child(3n) {
   width: 350px;
 }
-@media only screen and (min-device-width: 701px) and (max-device-width: 999px) {
+@media only screen and (min-device-width: 650px) and (max-device-width: 999px) {
   .carousel .mainSection .imgSlider img {
     display: none;
   }
@@ -105,10 +105,10 @@ body {
   }
   .carousel .mainSection .imgSlider img:nth-child(3n) {
     display: block;
-    width: 175px;
+    width: 150px;
   }
 }
-@media only screen and (max-device-width: 700px) {
+@media only screen and (max-device-width: 649px) {
   .carousel .mainSection .imgSlider {
     display: flex;
     justify-content: center;
@@ -118,7 +118,7 @@ body {
   }
   .carousel .mainSection .imgSlider img:nth-child(3n) {
     display: block;
-    width: 175px;
+    width: 150px;
   }
 }
 

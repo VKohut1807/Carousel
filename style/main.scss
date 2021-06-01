@@ -107,7 +107,7 @@ body {
             }
         }
 
-        @media only screen and (min-device-width : 701px) and (max-device-width : 999px) {
+        @media only screen and (min-device-width : 650px) and (max-device-width : 999px) {
             .imgSlider {
 
                 img {
@@ -121,12 +121,12 @@ body {
 
                 img:nth-child(3n) {
                     display: block;
-                    width: 175px;
+                    width: 150px;
                 }
             }
         }
 
-        @media only screen and (max-device-width : 700px) {
+        @media only screen and (max-device-width : 649px) {
             .imgSlider {
                 display: flex;
                 justify-content: center;
@@ -137,7 +137,7 @@ body {
 
                 img:nth-child(3n) {
                     display: block;
-                    width: 175px;
+                    width: 150px;
                 }
             }
         }
