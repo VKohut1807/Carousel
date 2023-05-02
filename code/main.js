@@ -8,7 +8,6 @@ let interval = null;
 let speed = 3000;
 
 function slider(){
-    valueZero(img);
     valueZero(steps);
     startInterval();
     arrowRight.onclick = right;
